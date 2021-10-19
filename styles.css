@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkCyan: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --gray: hsl(0, 0%, 95%);
+    --Shoulders: 'Big Shoulders Display', cursive;
+    --Lexend: 'Lexend Deca', sans-serif;
+}
+
+::selection {
+    color: var(--gray);
+    background-color: #000;
+}
+
+body {
+    background-color: var(--gray);
+    height: 100%;
+    min-width: 375px;
+    max-width: 1980px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    padding: 5em 1em;
+    font-family: var(--Lexend);
+}
+
+img {
+    display: block;
+    width: 75px;
+    margin-bottom: 2em;
+}
+
+.card {
+    border-radius: 10px;
+    overflow-x: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 350px;
+}
+
+.column {
+    padding: 3em 3em 4em 3em;
+}
+
+.column:first-of-type {
+    background-color:var(--orange);
+}
+
+.column:nth-of-type(2) {
+    background-color: var(--cyan);
+}
+
+.column:last-of-type {
+    background-color: var(--darkCyan);
+}
+
+h1 {
+    color: var(--gray);
+    font-family: var(--Shoulders);
+    font-size: 48px;
+    margin-bottom: 0.75em;
+}
+
+p {
+    color: var(--white);
+    line-height: 1.65;
+    margin-bottom: 3em;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    background-color: var(--gray);
+    transition: all 0.3s;
+    padding: 1em 2em;
+    border-radius: 25px;
+}
+
+.column:first-of-type a {
+    color: var(--orange);
+}
+
+.column:nth-of-type(2) a {
+    color: var(--cyan);
+}
+
+.column:last-of-type a {
+    color: var(--darkCyan);
+}
+
+.column:first-of-type a:hover {
+    border: 2px solid var(--gray);
+    color: var(--gray);
+    background-color: var(--orange);
+}
+
+.column:nth-of-type(2) a:hover {
+    border: 2px solid var(--gray);
+    color: var(--gray);
+    background-color: var(--cyan);
+}
+
+.column:last-of-type a:hover {
+    border: 2px solid var(--gray);
+    color: var(--gray);
+    background-color: var(--darkCyan);
+}
+
+@media only screen and (min-width: 1100px) {
+    
+    body {
+        height: 100vh;
+        padding: 0;
+    }
+
+    .column {
+        width: 350px;
+        padding: 3em 2.5em 4em 2.5em;
+    }
+
+    .card {
+        display: flex;
+        max-width: 100%;
+    }
+
+    p {
+        margin-bottom: 7.5em;
+    }
+
+}
+
